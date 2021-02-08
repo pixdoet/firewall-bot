@@ -27,7 +27,16 @@ async def firewallPing(ctx):
 @bot.command(pass_context=True, aliaese = ['about','help'])
 async def firewallHelp(ctx):
     await ctx.send('Firewall help:')
-    await ctx.send
+    await ctx.send('Firewall Help:
+        ```Usage: firewall [command] [argument]
+        firewall say/chickennugget [argument]: say the desired argument. Use quotes(") for args more 
+        than 2 words
+        firewall ping: Test latency between bot and Discord's servers
+        firewall help/about: This help Menu
+        
+        Contribute to firewall! https://github.com/pixdoet/firewall-bot/tree/main
+        Firewall is made by Jun Ian(wok#9607)
+        ```')
 
 TOKEN = ('token :)') # insert your token here
 bot.run(TOKEN)

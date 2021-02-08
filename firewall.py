@@ -1,7 +1,8 @@
 import discord
 from discord.ext import commands
+import lyrical
 
-bot = commands.Bot(command_prefix='firewall ')
+bot = commands.Bot(command_prefix='fw ')
 
 @bot.event
 async def on_ready():
@@ -24,19 +25,15 @@ async def chickennuggets(ctx,arg):
 async def firewallPing(ctx):
     await ctx.send('Bounce Pong! {0} secs'.format(round(bot.latency, 1)))
 
-@bot.command(pass_context=True, aliaese = ['about','help'])
-async def firewallHelp(ctx):
-    await ctx.send('Firewall help:')
-    await ctx.send('Firewall Help:
-        ```Usage: firewall [command] [argument]
-        firewall say/chickennugget [argument]: say the desired argument. Use quotes(") for args more 
-        than 2 words
-        firewall ping: Test latency between bot and Discord's servers
-        firewall help/about: This help Menu
-        
-        Contribute to firewall! https://github.com/pixdoet/firewall-bot/tree/main
-        Firewall is made by Jun Ian(wok#9607)
-        ```')
+@bot.command(pass_context=True, aliases = ['contribute'])
+async def firewallContributeMessage(ctx):
+    await ctx.send('Github: https://github.com/pixdoet/firewall-bot/blob/main/firewall.py')
 
-TOKEN = ('token :)') # insert your token here
+@bot.command(pass_context=True, aliases = ['lyrics'])
+async def firewallGetLyrics(ctx,sname,aname):
+    lyrics = lyrical.find(sname,aname)
+    await ctx.send(lyrics)
+
+
+TOKEN = ('') # insert your token here
 bot.run(TOKEN)

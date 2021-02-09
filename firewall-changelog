@@ -1,0 +1,76 @@
+Firewall changelog :)
+
+0.x Pandora
+-Firewall Pandora 0.??
+	-Base code written in PHP
+-Firewall Pandora 0.??
+	-Base code rewritten in Python
+	-Moved server from raspberrypi to MacBook Pro
+
+
+1.x Helios
+
+Firewall Helios 1.0bf1
+-Initial Release
+
+Firewall Helios 1.1bf1(Big-ass command release)
+-Added commands:
+	-help
+	-say
+	-chickennugget
+	-contribute
+	-ping
+-Changed prefix from firewall to fw
+
+Firewall Helios 1.1bf2
+-Fixed issue with say command running firewall commands
+
+Firewall Helios 1.2bf1
+-Added Commands:
+	-lyrics
+-Added new module: lyrical
+-Removed custom help text
+-Changed Github Page
+
+Firewall Helios 1.2bf2
+-Added Commands:
+	-wok
+	-kekw
+	-thomas
+	-version
+
+Firewall Helios 1.2bf3
+-Changed wok command to show little woks
+
+Firewall Helios 1.3bf1
+-Added commands:
+	-anime
+	-nooneasked
+-Changed custom status to “Pix’s Wok is Fun”
+-Added new module: animefy
+
+Firewall Helios 1.3bf2
+-Added command:
+	-randomsauce
+
+Firewall Helios 1.4bf1
+-Added commands:
+	-mwa/mua
+-Fixed changelog positioning error
+
+Firewall Helios 1.4bf2
+-Added commands:
+	-f/respects
+
+Firewall Helios 1.4bf3
+-Added commands:
+	-cry
+
+Firewall Helios 1.4bf4(The anti-racist release)
+(Fight racism. Take action now.)
+-Added commands:	
+	-racist
+
+Firewall Helios 1.4bf5
+-Added aliases:
+	-cry/sob

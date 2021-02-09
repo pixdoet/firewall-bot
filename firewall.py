@@ -1,3 +1,6 @@
+# The firewall bot :)
+# All code are made by jun Ian. Apis are not.
+
 import discord
 from discord.ext import commands
 import lyrical
@@ -9,12 +12,13 @@ bot = commands.Bot(command_prefix='fw ')
 @bot.event
 async def on_ready():
     print('Bot ready')
-    await bot.change_presence(activity=discord.Game("It's fw instead of Firewall"))
-
+    await bot.change_presence(activity=discord.Game("ly mwa :kissing_heart: "))
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
         return
+    if message.content.startswith("firewall"):
+        await message.send("The prefix for firewall has changed to fw")
     await bot.process_commands(message)
 
 # fw say
@@ -33,7 +37,7 @@ async def firewallPing(ctx):
 #fw contribute
 @bot.command(pass_context=True, aliases = ['contribute'])
 async def firewallContributeMessage(ctx):
-    await ctx.send('Github: https://github.com/pixdoet/firewall-bot/blob/main/firewall.py')
+    await ctx.send('Github: https://github.com/pixdoet/firewall-bot/')
 
 #fw lyrics
 @bot.command(pass_context=True, aliases = ['lyrics'])
@@ -58,11 +62,6 @@ async def firewallWok(ctx):
 async def firewallThomas(ctx):
     await ctx.send("Why you call Thomas he's gae")
 
-#fw version
-@bot.command(pass_context=True, aliases = ['version','ver'])
-async def firewallVersion(ctx):
-    await ctx.send("Firewall Helios 1.4bf1")
-
 #fw anime
 @bot.command(pass_context=True, aliases = ['anime'])
 async def firewallAnime(ctx,animeTitle):
@@ -83,17 +82,40 @@ async def firewallRandomsauce(ctx):
 #fw mwa
 @bot.command(pass_context=True, aliases = ['mwa','mua'])
 async def firewallMwa(ctx,whoToMwa):
-    await ctx.send("You mwaed :kissing_heart:" + whoToMwa + "!")
+    await ctx.send("You mwaed :kissing_heart: " + whoToMwa + "!")
 #fw respects
 @bot.command(pass_context=True, aliases = ['f','respects','respect'])
 async def firewallRespect(ctx, whoToF):
     await ctx.send("You paid respects[f] to " + whoToF)
     await ctx.send("https://cdn1.dotesports.com/wp-content/uploads/2018/09/08153731/Untitled.png")
-    
+
+#fw givebrain
+@bot.command(pass_context=True, aliases = ['givebrain'])
+async def firewallGiveBrain(ctx, whoToGive):
+    await ctx.send("You gave your brain :brain: to " + whoToGive)
+
+#fw cry
+@bot.command(pass_context=True, aliases = ['cry','sob'])
+async def firewallCry(ctx):
+    await ctx.send("Boo Hoo Hoo:sob:")
+    await ctx.send("https://fsa.zobj.net/crop.php?r=DxAJwethh781KLDbcjIvfG4FEdv3XKovrPPEb7emfvYIe6nikzZfBCeY5re7NFthuz1WUS-S9cLz2hQKCGr6qPoF3QiPJmSsjFSzcD0YfecG0u0dvAoL6o1iekCAOlaJ3nRVS-Hvy3l9BPLs")
+
+#fw racist
+@bot.command(pass_context=True, aliases = ['racist'])
+async def firewallRacist(ctx):
+    await ctx.send("Racism is not cool. No race is better than another, no race is worse than another.")
+    await ctx.send("Learn more: https://en.wikipedia.org/wiki/Anti-racism")
+
+#fw version
+@bot.command(pass_context=True, aliases = ['version','ver'])
+async def firewallVersion(ctx):
+    await ctx.send("Firewall Helios 1.4bf5")
+
 #fw changelog
 @bot.command(pass_context=True, aliases = ['changelog'])
 async def firewallChangelog(ctx):
-    await ctx.send("Firewall Helios 1.4bf2 \n -Added commands: \n     -f/respects\n     \n-")
+    await ctx.send("Full changelog here: https://github.com/pixdoet/firewall-bot/blob/main/firewall-changelog")
+    await ctx.send("Firewall Helios 1.4bf5 \n -Added aliases: \n     -cry/sob\n     \n-")
 
 TOKEN = ('') # insert your token here
 bot.run(TOKEN)

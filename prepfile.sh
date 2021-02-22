@@ -10,4 +10,6 @@ python3 -m pip install lyricsgenius
 python3 -m pip install mal-api
 python3 -m pip install gsearch
 
+mkdir fw-bot && cd fw-bot
+git clone https://github.com/pixdoet/firewall-bot.git
 echo "Done"

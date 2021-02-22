@@ -74,3 +74,12 @@ Firewall Helios 1.4bf4(The anti-racist release)
 Firewall Helios 1.4bf5
 -Added aliases:
 	-cry/sob
+
+
+Firewall Helios 1.bf1(lost)
+-Added commands:
+	-google/gsearch/search
+	
+Firewall Helios 1.6bf1
+-Removed commands:
+	-google/gsearch/search (will be added after bot database)

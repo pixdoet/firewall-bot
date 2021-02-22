@@ -1,10 +1,8 @@
-# The firewall bot :)
-# All code are made by jun Ian. Apis are not.
-
 import discord
 from discord.ext import commands
 import lyrical
 import animefy
+# import searchify # we wait until searchify is fixed
 import random
 
 bot = commands.Bot(command_prefix='fw ')
@@ -12,11 +10,11 @@ bot = commands.Bot(command_prefix='fw ')
 @bot.event
 async def on_ready():
     print('Bot ready')
-    await bot.change_presence(activity=discord.Game("ly mwa :kissing_heart: "))
+    await bot.change_presence(activity=discord.Game("I hate you! >_< "))
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
-        return
+        print("Loop")
     if message.content.startswith("firewall"):
         await message.send("The prefix for firewall has changed to fw")
     await bot.process_commands(message)
@@ -24,10 +22,12 @@ async def on_message(message):
 # fw say
 @bot.command(pass_context=True, aliases = ['say','chickennugget'])
 async def chickennuggets(ctx,arg):
-    try:
-        await ctx.send(arg)
-    except discord.ext.commands.errors.MissingRequiredArgument:
+    if arg == "":
         await ctx.send("Say something don't leave it blank")
+    elif arg == " ":
+        await ctx.send("No spaces please")
+    else:
+        await ctx.send(arg)
 
 #fw ping
 @bot.command(pass_context=True, aliases = ['ping','pong'])
@@ -88,6 +88,7 @@ async def firewallMwa(ctx,whoToMwa):
 async def firewallRespect(ctx, whoToF):
     await ctx.send("You paid respects[f] to " + whoToF)
     await ctx.send("https://cdn1.dotesports.com/wp-content/uploads/2018/09/08153731/Untitled.png")
+    await message.add_reaction(":regional_indicator_f:")
 
 #fw givebrain
 @bot.command(pass_context=True, aliases = ['givebrain'])
@@ -95,10 +96,16 @@ async def firewallGiveBrain(ctx, whoToGive):
     await ctx.send("You gave your brain :brain: to " + whoToGive)
 
 #fw cry
-@bot.command(pass_context=True, aliases = ['cry','sob'])
+@bot.command(pass_context=True, aliases = ['cry'])
 async def firewallCry(ctx):
     await ctx.send("Boo Hoo Hoo:sob:")
     await ctx.send("https://fsa.zobj.net/crop.php?r=DxAJwethh781KLDbcjIvfG4FEdv3XKovrPPEb7emfvYIe6nikzZfBCeY5re7NFthuz1WUS-S9cLz2hQKCGr6qPoF3QiPJmSsjFSzcD0YfecG0u0dvAoL6o1iekCAOlaJ3nRVS-Hvy3l9BPLs")
+
+#fw sob
+@bot.command(pass_context=True, aliases = ['sob'])
+async def firewallSob(ctx):
+    await ctx.send("Boo Hoo Hoo:sob:")
+    await ctx.send("https://i.pinimg.com/originals/2d/78/28/2d78285f218a3692496922c7635c5daf.gif")
 
 #fw racist
 @bot.command(pass_context=True, aliases = ['racist'])
@@ -106,16 +113,28 @@ async def firewallRacist(ctx):
     await ctx.send("Racism is not cool. No race is better than another, no race is worse than another.")
     await ctx.send("Learn more: https://en.wikipedia.org/wiki/Anti-racism")
 
+#fw pingmeme
+@bot.command(pass_context=True, aliases = ['pingmeme'])
+async def firewallPingmeme(ctx):
+    await ctx.send("Other bots: Ping normally")
+    await ctx.send("Firewall: \n **HGDBKHHDCLAMKNVKEFNSNLCJNSLNWDJNCKS**")
+
+#fw google (wait)
+#@bot.command(pass_context=True, aliases = ['google','search','gsearch'])
+#async def firewallSearch(ctx,searchQuery, searchResultsNum):
+    #gsearchres = searchify.searchg(searchQuery, searchResultsNum)
+    #await ctx.send("Results: \n" + gsearches)
+    
 #fw version
 @bot.command(pass_context=True, aliases = ['version','ver'])
 async def firewallVersion(ctx):
-    await ctx.send("Firewall Helios 1.4bf5")
+    await ctx.send("Firewall Helios 1.6bf1")
 
 #fw changelog
 @bot.command(pass_context=True, aliases = ['changelog'])
 async def firewallChangelog(ctx):
     await ctx.send("Full changelog here: https://github.com/pixdoet/firewall-bot/blob/main/firewall-changelog")
-    await ctx.send("Firewall Helios 1.4bf5 \n -Added aliases: \n     -cry/sob\n     \n-")
+    await ctx.send("Firewall Helios 1.6bf1 \n -Removed commands: \n     -search/google/gesearch\n     \n-Changed say command for empty/null message handling")
 
 TOKEN = ('') # insert your token here
 bot.run(TOKEN)

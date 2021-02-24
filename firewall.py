@@ -1,7 +1,26 @@
+# Licensing :)
+#   Discord multi-purpose bot
+#   Copyright (C) 2021  Hiew Jun Ian
+    
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+
+#   You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# Licensing ends :)
+
+
 import discord
 from discord.ext import commands
 import lyrical
-import animefy
+# import animefy # need some fixing
 # import searchify # we wait until searchify is fixed
 import random
 
@@ -63,10 +82,10 @@ async def firewallThomas(ctx):
     await ctx.send("Why you call Thomas he's gae")
 
 #fw anime
-@bot.command(pass_context=True, aliases = ['anime'])
-async def firewallAnime(ctx,animeTitle):
-    synopsis = animefy.search(animeTitle)
-    await ctx.send(synopsis)
+#@bot.command(pass_context=True, aliases = ['anime'])
+#async def firewallAnime(ctx,animeTitle):
+    #synopsis = animefy.search(animeTitle)
+    #await ctx.send(synopsis)
 
 #fw nooneasked
 @bot.command(pass_context=True, aliases = ['nooneasked'])
@@ -119,7 +138,7 @@ async def firewallPingmeme(ctx):
     await ctx.send("Other bots: Ping normally")
     await ctx.send("Firewall: \n **HGDBKHHDCLAMKNVKEFNSNLCJNSLNWDJNCKS**")
 
-#fw google (wait)
+#fw google
 #@bot.command(pass_context=True, aliases = ['google','search','gsearch'])
 #async def firewallSearch(ctx,searchQuery, searchResultsNum):
     #gsearchres = searchify.searchg(searchQuery, searchResultsNum)
@@ -128,13 +147,13 @@ async def firewallPingmeme(ctx):
 #fw version
 @bot.command(pass_context=True, aliases = ['version','ver'])
 async def firewallVersion(ctx):
-    await ctx.send("Firewall Helios 1.6bf1")
+    await ctx.send("Firewall Helios 1.7bf1")
 
 #fw changelog
 @bot.command(pass_context=True, aliases = ['changelog'])
 async def firewallChangelog(ctx):
     await ctx.send("Full changelog here: https://github.com/pixdoet/firewall-bot/blob/main/firewall-changelog")
-    await ctx.send("Firewall Helios 1.6bf1 \n -Removed commands: \n     -search/google/gesearch\n     \n-Changed say command for empty/null message handling")
+    await ctx.send("Firewall Helios 1.7bf1 \n -Removed commands: \n     -Animefy\n     \n-Anime will be back after the api has been fixed")
 
 TOKEN = ('') # insert your token here
 bot.run(TOKEN)

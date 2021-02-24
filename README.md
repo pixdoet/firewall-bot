@@ -1,3 +1,6 @@
+I now have a website! https://cleantalk.cf  
+Support me there and also add my bot with this link: https://discord.com/oauth2/authorize?client_id=807074221188186112&permissions=0&scope=bot
+
 # Firewall-bot
 Firewall Discord Bot's source code and files :)  
 This bot is a creation of Jun Ian(wok#9607). Feel free to make pull requests on bug fixing.  
@@ -26,3 +29,6 @@ Get your API keys here:
 Discord: https://discord.com/developers  
 Genius: https://genius.com/api-clients  
 MAL and gsearch do not need an API key
+
+# Licensing  
+This program is licensed under the GNU GPL v3 license. The license can be found here: https://www.gnu.org/licenses/gpl-3.0.txt

@@ -83,3 +83,8 @@ Firewall Helios 1.5bf1(lost)
 Firewall Helios 1.6bf1
 -Removed commands:
 	-google/gsearch/search (will be added after bot database)
+
+Firewall Helios 1.7bf1
+-Removed commands:
+	-anime
+-Added licensing

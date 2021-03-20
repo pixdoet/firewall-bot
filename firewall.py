@@ -1,5 +1,5 @@
 # Licensing :)
-#   Discord multi-purpose bot
+#   Firewall-Discord multi-purpose bot
 #   Copyright (C) 2021  Hiew Jun Ian
     
 #   This program is free software: you can redistribute it and/or modify
@@ -16,9 +16,11 @@
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # Licensing ends :)
 
-
+# 1.7bf4
+import corwlic
 import discord
 from discord.ext import commands
+# import shotafy # no pedo
 import lyrical
 # import animefy # need some fixing
 # import searchify # we wait until searchify is fixed
@@ -143,17 +145,44 @@ async def firewallPingmeme(ctx):
 #async def firewallSearch(ctx,searchQuery, searchResultsNum):
     #gsearchres = searchify.searchg(searchQuery, searchResultsNum)
     #await ctx.send("Results: \n" + gsearches)
+
+#fw shota
+#@bot.command(pass_context=True, aliases = ['gg'])
+#async def firewallShota(ctx):
+    #shota2send = shotafy.rndshota()
+    #await ctx.send(shota2send)
+    #await ctx.send("So cute :)")
+
+#fw noshota
+@bot.command(pass_context=True, aliases = ['noshota','shota','shotacon'])
+async def firewallNoshota(ctx):
+    await ctx.send("The shota command has been removed. Fuck shotacons")
+    
+#fw fuckyou
+@bot.command(pass_context=True, aliases=['fuckyou','bung moktar'])
+async def firewallFuckyou(ctx):
+    await ctx.send("https://cdn.discordapp.com/attachments/766933316095574016/816171443636928562/gif.gif")
     
 #fw version
 @bot.command(pass_context=True, aliases = ['version','ver'])
 async def firewallVersion(ctx):
-    await ctx.send("Firewall Helios 1.7bf1")
+    await ctx.send("Firewall Helios 1.7bf4")
 
 #fw changelog
 @bot.command(pass_context=True, aliases = ['changelog'])
 async def firewallChangelog(ctx):
     await ctx.send("Full changelog here: https://github.com/pixdoet/firewall-bot/blob/main/firewall-changelog")
-    await ctx.send("Firewall Helios 1.7bf1 \n -Removed commands: \n     -Animefy\n     \n-Anime will be back after the api has been fixed")
+    await ctx.send("Firewall Helios 1.7bf4 \n -Temporarily disabled shota command(will re-enable) \n     \n     \n")
 
-TOKEN = ('') # insert your token here
+#fw license
+@bot.command(pass_context=True,aliases=['license'])
+async def firewallLicense(ctx):
+    await ctx.send("Firewall  Copyright (C) 2021  Hiew Jun Ian(wok#9607)")
+    await ctx.send("This program comes with ABSOLUTELY NO WARRANTY")
+    await ctx.send("This is free software, and you are welcome to redistribute it under certain conditions")
+    await ctx.send("The full license can be found here: https://www.gnu.org/licenses/gpl-3.0.txt")
+    await ctx.send("Another copy(idk why) can be found here: http://cleantalk.cf/source/gpl-3.0.txt")
+
+
+TOKEN = ('never gonna gib you up :)') # insert your token here
 bot.run(TOKEN)

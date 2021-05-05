@@ -1,4 +1,4 @@
-~~I now have a website! https://cleantalk.cf~~ The website is down now and won't be receiving requests until I find better ways of hosting.  
+I now have a website! https://cleantalk.cf The website is back up after~~The website is down now and won't be receiving requests until I find better ways of hosting.~~  
 ~~Support me there and also~~ add my bot with this link: https://discord.com/oauth2/authorize?client_id=807074221188186112&permissions=0&scope=bot
 
 # Firewall-bot
